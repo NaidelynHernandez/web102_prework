@@ -3,11 +3,18 @@
 body {
     font-family: 'Cabin';
     background-color: white;
+    text-align: center;
 }
 
 #tentacles {
-    width: 50px;
+    width: 200px;
 }
+
+.header-text{
+    font-size: 90px;
+    text-align: center;
+}
+
 
 .header {
     display: flex;
@@ -18,6 +25,7 @@ body {
     margin-right: -10px;
     margin-top: -10px;
 }
+
 
 .stats-container {
     display: flex;
@@ -37,6 +45,10 @@ body {
     width: 100%;
     text-align: center;
 }
+.stats-card:hover {
+    background-color: yellow;
+  }
+  
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
@@ -78,4 +90,14 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+#unfunded-btn:hover {
+    background-color: yellow;
+}
+#funded-btn:hover {
+    background-color: yellow;
+}
+#all-btn:hover {
+    background-color: yellow;
 }
