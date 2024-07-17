@@ -84,7 +84,7 @@ const totalContributions = GAMES_JSON.reduce( (sum, current) => {
 }, 0);
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-const display1 = `<h4>${totalContributions.toLocaleString('en-US')} </h4>`;
+const display1 = `<h4> $${totalContributions.toLocaleString('en-US')} </h4>`;
 contributionsCard.innerHTML = display1;
 
 
@@ -95,7 +95,7 @@ const totalRaised= GAMES_JSON.reduce( (sum, current)=>{
 },0);
 
 // set inner HTML using template literal
-const display2 = `<h4>${totalRaised.toLocaleString()}</h4>`;
+const display2 = `<h4>$${totalRaised.toLocaleString()}</h4>`;
 raisedCard.innerHTML = display2;
 
 // grab number of games card and set its inner HTML
@@ -172,7 +172,7 @@ const countUnfunded= filterUnfunded.reduce((sum)=> {
 console.log(countUnfunded);
 
 // create a string that explains the number of unfunded games using the ternary operator
-const displayStr = `A total of ${totalContributions.toLocaleString()} has been raised for ${GAMES_JSON.length} games. Currently ${countUnfunded} ${countUnfunded === 1 ? 'game remains' : 'games remain'} unfunded. We need your help funding these amazing ${countUnfunded === 1 ? 'game!' : 'games!'}`;
+const displayStr = `A total of $ ${totalContributions.toLocaleString()} has been raised for ${GAMES_JSON.length} games. Currently ${countUnfunded} ${countUnfunded === 1 ? 'game remains' : 'games remain'} unfunded. We need your help funding these amazing ${countUnfunded === 1 ? 'game!' : 'games!'}`;
 const messageContainer= document.createElement('p');
 messageContainer.innerHTML= displayStr;
 descriptionContainer.append(messageContainer)
